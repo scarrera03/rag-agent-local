@@ -9,4 +9,4 @@ __pycache__/
 *.sqlite3
 .ipynb_checkpoints/
 *.log
-
+db/
