@@ -13,7 +13,7 @@ Build an agent that uses internal documents as the source of truth, enabling acc
 ## General architecture of the RAG system
 
 This diagram shows how documents are processed and used to generate grounded answers via a local LLM:
-![RAG architecture diagram](images/diagram.jpg)
+
 <p align="center">
   <img src="images/diagram.jpg" alt="RAG architecture diagram" width="600"/>
 </p>
