@@ -18,6 +18,40 @@ This diagram shows how documents are processed and used to generate grounded ans
   <img src="images/diagram.jpg" alt="RAG architecture diagram" width="600"/>
 </p>
 
+### 📊 ASCII Diagram (Text View)
+
+This ASCII diagram represents the main components and flow of the `rag-agent-local` architecture. It provides a quick overview of how the system processes a user's question and returns an answer based on internal documents and a local LLM.
+                        +---------------------+
+                        |     End User        |
+                        | (input: question)   |
+                        +----------+----------+
+                                   |
+                                   v
+                        +----------+----------+
+                        |   RAG Agent (CLI)   |
+                        | (ReAct loop logic)  |
+                        +----------+----------+
+                                   |
+              +--------------------+--------------------+
+              |                                         |
+              v                                         v
+   +----------+----------+                 +------------+-------------+
+   |  Vector Database    |                 |  LM Studio (Local LLM)   |
+   |  (retrieval index)  |                 |  mistral-7b-instruct     |
+   +----------+----------+                 +------------+-------------+
+              |                                         ^
+              v                                         |
+ +------------+-------------+               +-----------+-----------+
+ |  Retrieved Documents     |   prompt +    | LLM generates response |
+ |  (relevant context)      |   context --->| (Thought, Action...)   |
+ +------------+-------------+               +------------------------+
+                                   |
+                                   v
+                        +----------+----------+
+                        | Final Answer + Log  |
+                        +---------------------+
+
+
 
 ## Tech Stack
 
