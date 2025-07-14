@@ -21,6 +21,7 @@ This diagram shows how documents are processed and used to generate grounded ans
 ### 📊 ASCII Diagram (Text View)
 
 This ASCII diagram represents the main components and flow of the `rag-agent-local` architecture. It provides a quick overview of how the system processes a user's question and returns an answer based on internal documents and a local LLM.
+```
                         +---------------------+
                         |     End User        |
                         | (input: question)   |
@@ -51,7 +52,7 @@ This ASCII diagram represents the main components and flow of the `rag-agent-loc
                         | Final Answer + Log  |
                         +---------------------+
 
-
+```
 
 ## Tech Stack
 
